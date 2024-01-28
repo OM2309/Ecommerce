@@ -1,10 +1,13 @@
 {
   "name": "ecommerce",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ecommerce store",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "backend": "nodemon backend/index.js",
+    "frontend": "npm run dev --prefix frontend",
+    "dev":"concurrently \"npm run frontend\" \"npm run backend\""
   },
   "keywords": [],
   "author": "",
